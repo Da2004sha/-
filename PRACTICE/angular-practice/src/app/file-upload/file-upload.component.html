@@ -1,0 +1,22 @@
+<!-- docx-viewer.component.html -->
+
+<div>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="onUpload()" [disabled]="!editedDocument || isUploading">Загрузить</button>
+  <button (click)="onSave()" [disabled]="!editedDocument || isUploading">Сохранить</button>
+  <p *ngIf="isUploading">Загрузка...</p>
+  <p *ngIf="uploadSuccess">Файл успешно загружен!</p>
+  <p *ngIf="uploadError">Ошибка загрузки файла.</p>
+  <!-- Отображение загруженного файла -->
+  <a *ngIf="uploadedFileUrl" [href]="uploadedFileUrl" target="_blank">Скачать загруженный файл</a>
+</div>
+
+<div class="editor-container">
+  <h2>Document Editor</h2>
+  <editor #tinyEditor [init]="{
+    plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table help wordcount',
+    toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help',
+    height: 500,
+    menubar: false
+  }"></editor>
+</div>

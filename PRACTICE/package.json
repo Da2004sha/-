@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ngx-extended-pdf-viewer": "^21.0.0-alpha.6"
+  }
+}

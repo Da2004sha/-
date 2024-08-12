@@ -1,0 +1,8 @@
+/* assets/editor-styles.css */
+.custom-overlay {
+  position: absolute;
+  z-index: -999999;
+}
+.tox-tinymce {
+  flex-grow: 1;
+}

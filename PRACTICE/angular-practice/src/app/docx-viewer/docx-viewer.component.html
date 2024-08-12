@@ -1,0 +1,46 @@
+<div class="doc-btn" style="margin-left: 0px;margin-right: 0px; display: flex; align-items: center; justify-content: flex-start; background-color: darkorange; padding: 10px;">
+  <input id="toggleImagesCheckbox" type="checkbox" #checkbox (change)="toggleImages()" />
+  <label for="toggleImagesCheckbox" style="margin: 0 0 0 3px; margin-right: 13px">Бланк</label>
+  <button type="button" (click)="fileInput.click()" style="margin-right: 3px">
+    <span>Открыть</span>
+    <input #fileInput type="file" (change)="onFileSelected($event)" style="display:none;" />
+  </button>
+<!--  <button (click)="saveDocument()">Сохранить</button>-->
+</div>
+
+<editor #tinyEditor
+        apiKey="y89ljce2tvv0eo8w9l22dswt3b889w5tpwmuo4bg9jyc8x5l"
+        [init]="{
+    plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table help wordcount',
+    toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help customOverlay',
+    resize:false,
+    height:755,
+    content_css: '/assets/editor-styles.css',
+    image_class_list: [
+      { title: 'None', value: '' },
+      { title: 'Custom Overlay', value: 'custom-image-overlay' }
+    ],
+    setup: setupEditor,
+    style_formats: [
+      { title: 'Custom Overlay', block: 'div', classes: 'custom-overlay' }
+    ],
+    formats: {
+      custom_overlay: { block: 'div', classes: 'custom-overlay' }
+    }
+  }"
+></editor>
+
+<!-- Стили для корректного отображения контента -->
+<style>
+  html, body, .editor-container, .tox-tinymce {
+    height: 100%;
+    width: 100%;
+    margin: -2px;
+    padding: 0;
+  }
+
+  .editor-container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

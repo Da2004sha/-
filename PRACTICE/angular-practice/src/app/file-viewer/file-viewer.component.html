@@ -1,0 +1,15 @@
+<main>
+  <div class="menu">
+    <div class="doc-btn" style="margin-left: 70px; display: flex; align-items: center; justify-content: center">
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox" style="margin: 0 0 0 3px">Бланк</label>
+    </div>
+    <select class="doc-btn" name="" id=""></select>
+    <button class="doc-btn" (click)="print()">Печать</button>
+    <button class="doc-btn" (click)="downloadFile()">Загрузить</button>
+  </div>
+  <div class="file-preview" style="margin-top: 20px;">
+    <h3>Документ для загрузки:</h3>
+    <a href="assets/example.docx" download>Скачать example.docx</a>
+  </div>
+</main>

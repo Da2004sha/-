@@ -1,0 +1,43 @@
+main {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.doc-btn {
+  padding: 3px 5px 3px 5px;
+  margin: 5px 5px 5px 0;
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+
+.content-container {
+  margin-bottom: 20px;
+}
+
+.html-content {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  overflow: auto;
+}
+.custom-image-overlay {
+  position: absolute;
+  z-index: -999999;
+}
+
+.editor-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+

@@ -1,0 +1,26 @@
+main {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  font-size: 14px;
+  background-color: darkorange;
+  display: flex;
+  align-items: baseline
+}
+
+.doc-btn {
+  padding: 3px 5px 3px 5px;
+  margin: 5px 5px 5px 0;
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
